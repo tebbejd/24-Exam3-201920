@@ -3,9 +3,9 @@ Exam 3, problem 1.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Jacob Tebbe.  January 2019.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -95,13 +95,16 @@ def run_test_problem1():
 
     # SUMMARY of the test results:
     print_summary_of_test_results(test_results)
-    
+
 
 def fibonacci(n):
     """ Returns the Nth fibonacci number. """
-    if n == 1: return 0
-    elif n == 2: return 1
-    else: return fibonacci(n-1) + fibonacci(n-2)
+    if n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 def problem1(n):
@@ -126,7 +129,7 @@ def problem1(n):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # **** IMPORTANT ****:
     # We supplied a   fibonacci   function above.
@@ -139,6 +142,15 @@ def problem1(n):
     # and THEN try the full-credit version.
     # As always, CONTINUE to the next problem if you are STUCK on this one.
     # -------------------------------------------------------------------------
+    number = 1
+    previous_number = 0
+    while True:
+        previous = number
+        number += previous_number
+        if number >= n:
+            previous_number = previous
+            return previous_number
+        previous_number = previous
 
 
 ###############################################################################

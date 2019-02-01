@@ -3,9 +3,9 @@ Exam 3, problem 3.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Jacob Tebbe.  January 2019.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -182,9 +182,20 @@ def problem3(sequence):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    number = 0
+    for k in range(len(sequence)):
+        count = 0
+        for j in range(2, sequence[k]):
+            if sequence[k] % j == 0:
+                count += 1
+        if count == 0:
+            print('hi')
+            number += 1
+            sequence[k] = sequence[k] + 3
+    return number
 
 
 ###############################################################################
